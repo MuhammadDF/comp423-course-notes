@@ -2,3 +2,6 @@
 
 * Primary author: [Muhammad Fouly](https://github.com/MuhammadDF)
 * Reviewer: [Mohammad Saatialsoruji](https://github.com/meihab)
+
+!!! success
+    I have successfuly added admonitions to MkDocs!
