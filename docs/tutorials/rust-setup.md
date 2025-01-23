@@ -175,7 +175,7 @@ fn main() {
     println!("HELLO COMP423");
 }
 ```
-#### Finally...
+### Finally... Compiling and Running
 
 We can no compile like so:
 
