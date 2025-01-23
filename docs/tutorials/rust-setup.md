@@ -14,3 +14,4 @@
 # We will see these many times throughout the tutorial
 print("We love COMP 423!")
 ```
+## Welcome  
