@@ -84,7 +84,8 @@ These libraries are installed using cargo, a package manager for Rust.
 
 In summary, the the devcontainer.json file specifies configuration for a consistent development environment using a Docker image. The requirements.txt file ensures all needed Rust package for our project are installed when the container is created. Together, these files automate the process of setting up a developer environment, making it easier for you and others to work on the project.
 
-Lets establish your static website development environment:
+Lets establish your development environment:
+
 
 ### Step 1: Add Development Container Configuration
 
@@ -119,6 +120,7 @@ Reopen the project in the container by pressing Ctrl+Shift+P (or Cmd+Shift+P on 
 
 Once your dev container setup completes, close the current terminal tab (trash can), open a new terminal pane within VSCode, and try running rust --version to see your dev container is running a recent version of Python without much effort! (As of January 2025, the latest stable Rust version is 1.84.0.)
 
+## Part 3: Developing in Rust
 
 ### Creating a New Package
 To start a new package with Cargo, use cargo new:
