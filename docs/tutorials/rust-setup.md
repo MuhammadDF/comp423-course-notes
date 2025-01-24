@@ -240,6 +240,18 @@ HELLO COMP423
 !!! success
     Congratulations! You have built a development container in Rust!
 
+## Part 4: Pushing to Github
+You can now run the following commands in order to push your amazing new Dev Container project to Github for the world to see
+
+``` bash
+git add . # this is for staging your changes
+git commit -m "Successfully printed HELLO COMP 423 with my own Rust Dev Container"
+git push
+```
+
+Congrats you have now finished the tutorial!
+
+
 ## References
 
 1. [Kris Jordan’s COMP 423 Tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/)  
