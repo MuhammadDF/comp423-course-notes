@@ -27,7 +27,7 @@ This tutorial will provide step-by-step instructions for creating a Dev Containe
 ---
 
 ## Let's start with the prerequisites
-Before we dive in, make sure you have:
+Before we dive in, make sure you have the following if you don't already:
 
 1. A GitHub account: Sign up at [GitHub.](https://github.com/)
 1. Git installed: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
