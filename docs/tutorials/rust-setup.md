@@ -22,8 +22,7 @@ print("We love COMP 423!")
 This tutorial will provide stepy-by-step instructions for creating a Dev Container in Rust.
 
 !!! info
-    This tutorial is highly inspired by a [previous tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/) my professor [Kris Jordan](https://www.linkedin.com/in/krisjordan/) had already made
-    so you might see a lot of similarities and I would highly recommend you check his out!
+    This tutorial is highly inspired by a [previous tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/) my professor [Kris Jordan](https://www.linkedin.com/in/krisjordan/) had already made so you might see a lot of similarities and I would highly recommend you check his out!
 
 ---
 
@@ -209,7 +208,7 @@ edition = "2021"
 
 [dependencies]
 ```
-This is called a [manifest](https://doc.rust-lang.org/cargo/appendix/glossary.html#manifest), and it contains all of the metadata that Cargo needs to compile your package. This file is written in the [TOML](https://toml.io/) format
+This is called a [manifest](https://doc.rust-lang.org/cargo/appendix/glossary.html#manifest), and it contains all of the metadata that Cargo needs to compile your package. This file is written in the [TOML](https://toml.io/) format.
 
 Here’s what’s in `src/main.rs`:
 ``` rust
@@ -237,6 +236,15 @@ cargo build
 ```
 
 The `cargo build` command compiles your Rust project and generates an executable kind of like `gcc [filename.c] -o [output_filename]` that you may remember from COMP 211
+
+#### How It Works
+
+**Compilation**:
+`cargo build` compiles your project and places the resulting binary or library in the `target/debug` directory by default.
+
+**Default Build Mode**:
+By default, `cargo build` compiles in debug mode. Debug builds prioritize faster compilation and include debug symbols, making them suitable for development and testing.
+
 
 After building, the binary (executable) will be located in:
 ``` bat
