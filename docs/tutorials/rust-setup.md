@@ -228,7 +228,7 @@ fn main() {
 Cargo generated a “hello world” program for you, otherwise known as a [binary crate](https://doc.rust-lang.org/cargo/appendix/glossary.html#crate). Let’s compile it but first change it to be the follwing:
 
 ``` rust
-fn main() {
+fn main() {  //fn stands for function
     println!("HELLO COMP423");
 }
 ```
