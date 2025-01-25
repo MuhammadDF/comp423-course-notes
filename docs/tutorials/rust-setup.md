@@ -53,7 +53,7 @@ cd rust-dev-cont
 ``` bat
 git init
 ```
-- Create a README file and add the following
+- Create a README file and add the following:
 ``` bat
 echo "# Building a Dev Container in Rust" > README.md
 git add README.md
@@ -288,7 +288,7 @@ git commit -m "Successfully printed HELLO COMP423 with my own Rust Dev Container
 git push
 ```
 
-Congrats you have now finished the tutorial!
+Congrats you have now finished the tutorial and the whole world can see your amazing work on GitHub!
 
 ---
 
