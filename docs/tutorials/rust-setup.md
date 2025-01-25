@@ -19,7 +19,7 @@ print("We love COMP 423!")
 
 ## Welcome  
 
-This tutorial will provide step-by-step instructions for creating a Dev Container in Rust.
+This tutorial will provide step-by-step instructions for creating a Development (Dev) Container in Rust.
 
 !!! info
     This tutorial is highly inspired by a [previous tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/) my professor [Kris Jordan](https://www.linkedin.com/in/krisjordan/) had already made so you might see a lot of similarities and I would highly recommend you check his out!
@@ -35,12 +35,12 @@ Before we dive in, make sure you have the following if you don't already:
 1. Docker installed:[Get Docker here.](https://www.docker.com/products/docker-desktop) This is required to run the container.
 
 !!! note
-    For this tutorial, you do not need to install anything other than VSCode, Docker and Git. You should not install Rust. That is the role of the dev container!
+    For this tutorial, you do not need to install anything other than VSCode, Docker, and Git. You should not install Rust. That is the role of the dev container!
     Remember, we are trying to minimize the things we have to manually download and install.
 
 ---
 
-## Part 1: Project setup (Setting up your directory, Git, and Github)
+## Part 1: Project setup (Setting up your directory, Git, and GitHub)
 
 ### Step 1: Creating a directory and a local Git Repository
 - Open you terminal or command prompt.
@@ -77,8 +77,8 @@ git commit -m "Initial commit with README"
 
 ---
 
-### Step 3: Link you Local Repository to Github
-1. Add the Github repository as a remote: 
+### Step 3: Link you Local Repository to GitHub
+1. Add the GitHub repository as a remote: 
 ``` bat
 git remote add origin https://github.com/<your-username>/rust-dev-cont.git
 ```
@@ -104,7 +104,7 @@ In essence, a **dev container** is a preconfigured environment defined by a set 
 
 #### Why is this valuable?
 
-In the technology industry, teams often work on complex projects that require a specific set of tools and dependencies to function correctly. Without a dev container, each developer must manually set up their environment. The can lead to errors, wasted time, and inconsistencies. With a dev container:
+In the tech industry, teams often work on complex projects that require a specific set of tools and dependencies to function correctly. Without a dev container, each developer must manually set up their environment. You can only imagine how much it can lead to errors, wasted time, and inconsistencies. With a dev container:
 
 - Everyone works in an identical environment, reducing bugs caused by "it works on my machine" issues.
 - Onboarding new team members becomes faster and easier, as they can start coding with just a few steps.
@@ -277,8 +277,8 @@ HELLO COMP423
 
 ---
 
-## Part 4: Pushing to Github
-You can now run the following commands in order to push your amazing new Dev Container project to Github for the world to see
+## Part 4: Pushing to GitHub
+You can now run the following commands in order to push your amazing new Dev Container project to GitHub for the world to see!
 
 ``` bash
 git add . # this is for staging your changes
