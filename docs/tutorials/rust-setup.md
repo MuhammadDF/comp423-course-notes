@@ -86,7 +86,7 @@ git push --set-upstream origin main
 ```
 !!! note
     `git push --set-upstream origin main`: This command pushes the `main` branch to the remote repository `origin`. The `--set-upstream` flag sets up the `main` branch to track the remote branch, meaning future pushes and pulls can be done without specifying the branch name and just writing `git push origin` when working on your local `main` branch. This long flag has a corresponding `-u` short flag.
-You can now refresh your GitHub repository in your browser to see that the same commit you made locally has now been pushed to remote. You can also use `git log` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub.
+You can now refresh your browser to see that the same commit you made locally has now been pushed to the remote Github Repo. You can also use `git log` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub.
 
 ---
 
@@ -143,7 +143,7 @@ The `devcontainer.json` file defines the configuration for your development envi
 
 - `name`: A descriptive name for your dev container.
 - `image`: The Docker image to use, in this case, the latest version of a Rust environment. [Microsoft maintains a collection of base images for many programming language environments](https://hub.docker.com/r/microsoft/vscode-devcontainers), but you can also create your own!
-- `customizations`: Adds useful configurations to VS Code, like installing the Rust Analyzer extension. When you search for VSCode extensions on the marketplace, you will find the string identifier of each extension in its sidebar. Adding extensions here ensures other developers on your project have them installed in their dev containers automatically.
+- `customizations`: Adds useful configurations to VS Code, like installing the Rust Analyzer extension. When you search for VSCode extensions on the marketplace, you will find the string identifier of each extension in its sidebar (i.e `rust-lang.rust-analyzer`). Adding extensions here ensures other developers on your project have them installed in their dev containers automatically. Remember, we are trying to get rid of manually installing a bunch of software.
 - `postCreateCommand`: A command to run after the container is created. In our case, we do not need to install anything extra for us to print a simple string in Rust.
 ``` json
 {
@@ -164,7 +164,7 @@ The `devcontainer.json` file defines the configuration for your development envi
 ### Step 2. Reopen the Project in a VSCode Dev Container
 Reopen the project in the container by pressing Ctrl+Shift+P (or Cmd+Shift+P on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This will take a few minutes for the first time to download and install the image and everything.
 
-Once your dev container setup completes, close the current terminal tab, open a new terminal pane within VSCode, and try running `rustc --version` to see your dev container is running a recent version of Rust without you having to even manually download or install anything! (As of January 2025, the latest stable Rust version is 1.83.0.)
+Once your dev container setup completes, open a new terminal pane within VSCode, and try running `rustc --version` to see your dev container is running a recent version of Rust without you having to even manually download or install anything! (As of January 2025, the latest stable Rust version is 1.83.0.) The `latest` keyword in the `image` specification should take care of that!
 
 ---
 
