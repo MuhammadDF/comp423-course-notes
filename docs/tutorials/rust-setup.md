@@ -29,13 +29,14 @@ This tutorial will provide step-by-step instructions for creating a Dev Containe
 ## Let's start with the prerequisites
 Before we dive in, make sure you have:
 
-1. A GitHub account: If you don’t have one yet, sign up at [GitHub.](https://github.com/)
-1. Git installed: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you don’t already have it.
-1. Visual Studio Code (VS Code): Download and install it from [here.](https://code.visualstudio.com/)
-1. Docker installed: Required to run the dev container. [Get Docker here.](https://www.docker.com/products/docker-desktop)
+1. A GitHub account: Sign up at [GitHub.](https://github.com/)
+1. Git installed: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+1. Visual Studio Code (VS Code): Download and install [VSCode.](https://code.visualstudio.com/)
+1. Docker installed:[Get Docker here.](https://www.docker.com/products/docker-desktop) This is required to run the container.
 
 !!! note
     For this tutorial, you do not need to install anything other than VSCode, Docker and Git. You should not install Rust. That is the role of the dev container!
+    Remember, we are trying to minimize the things we have to manually download and install.
 
 ---
 
@@ -82,15 +83,15 @@ git commit -m "Initial commit with README"
 git remote add origin https://github.com/<your-username>/rust-dev-cont.git
 ```
 Replace `<your-username>` with your GitHub username.
-1. Check your default branch name with the subcommand `git branch`. If it's not `main`, rename it to `main` with the following command: `git branch -M main`. Old versions of `git` use the name `master` for the primary branch. However, these days `main` is the standard primary branch name.
+1. Check your default branch name with the subcommand `git branch`. If it's not `main`, rename it to `main` with the following command: `git branch -M main`. Old versions of `git` use the name `master` for the primary branch. However, `main` is the standard primary branch name ever since 2020.
 
 1. Push your local commits to the GitHub repository:
 ``` bat
 git push --set-upstream origin main
 ```
 !!! note
-    `git push --set-upstream origin main`: This command pushes the `main` branch to the remote repository `origin`. The `--set-upstream` flag sets up the `main` branch to track the remote branch, meaning future pushes and pulls can be done without specifying the branch name and just writing `git push origin` when working on your local `main` branch. This long flag has a corresponding `-u` short flag.
-You can now refresh your browser to see that the same commit you made locally has now been pushed to the remote Github Repo. You can also use `git log` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub.
+    `git push --set-upstream origin main`: This command pushes the `main` branch to the remote repository `origin`. The `--set-upstream` flag sets up the `main` branch to track the remote branch `origin/main`, meaning future pushes and pulls can be done without specifying the branch name and just writing `git push origin` when working on your local `main` branch. This long flag has a corresponding `-u` short flag.
+You can now refresh your GitHub repository in your browser to see that the same commit you made locally has now been pushed to remote. You can also use `git log` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub.
 
 ---
 
@@ -99,7 +100,7 @@ You can now refresh your browser to see that the same commit you made locally ha
 Before you begin developing in Rust, you need to set up your development environment! 
 ### What is a Development (Dev) Container?
 
-In essence, a **dev container** is a preconfigured environment defined by a set of configuration files usually using Docker to create isolated setups for development. You can think of it a mini computer running inside your computer including everything you need to work on a project. Your dev container will include the right programming language, tools, libraries and dependencies. This is why you don't need to install Rust for the purpose of this tutorial. The dev container ensures that your development environment is consistent and works across different machines.
+In essence, a **dev container** is a preconfigured environment defined by a set of configuration files usually using Docker to create isolated setups for development. You can think of it as a mini computer running inside your computer that includes everything you need to work on a specific project. Your dev container will include the right programming language, tools, libraries and dependencies. This is why you don't need to install Rust for the purpose of this tutorial. The dev container ensures that your development environment is consistent and works across different machines.
 
 #### Why is this valuable?
 
@@ -242,7 +243,6 @@ cargo build
 ```
 
 The `cargo build` command compiles your Rust project and generates an executable kind of like `gcc [filename.c] -o [output_filename]` that you may remember from COMP 211
-
 #### How It Works
 
 **Compilation**:
@@ -250,8 +250,6 @@ The `cargo build` command compiles your Rust project and generates an executable
 
 **Default Build Mode**:
 By default, `cargo build` compiles in debug mode. Debug builds prioritize faster compilation and include debug symbols, making them suitable for development and testing.
-
-
 After building, the binary (executable) will be located in:
 ``` bat
 target/debug/hello_world
