@@ -14,6 +14,9 @@
 # We will see these many times throughout the tutorial
 print("We love COMP 423!")
 ```
+
+---
+
 ## Welcome  
 
 This tutorial will provide stepy-by-step instructions for creating a Dev Container in Rust.
@@ -22,6 +25,8 @@ This tutorial will provide stepy-by-step instructions for creating a Dev Contain
     This tutorial is highly inspired by a [previous tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/) my professor [Kris Jordan](https://www.linkedin.com/in/krisjordan/) had already made
     so you might see a lot of similarities and I would highly recommend you check his out!
 
+---
+
 ## Let's start with the prerequisites
 Before we dive in, make sure you have:
 
@@ -29,6 +34,8 @@ Before we dive in, make sure you have:
 1. Git installed: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you don’t already have it.
 1. Visual Studio Code (VS Code): Download and install it from [here.](https://code.visualstudio.com/)
 1. Docker installed: Required to run the dev container. [Get Docker here.](https://www.docker.com/products/docker-desktop)
+
+---
 
 ## Part 1: Project setup (Setting up your directory, Git, and Github)
 
@@ -52,7 +59,9 @@ git commit -m "Initial commit with README"
 !!! note
     The command `echo` sends the string in quotation marks to the specified place.
     Usually without any place to go it just sends it back to stdout which is your terminal by default.
-    However if you have taken 211 before you know that the `>` operator writes whatever is on the left of it (Which could be the output of a program) to the specified place on the right. If the file does niot exist already, it creates it.
+    However if you have taken 211 before you know that the `>` operator writes whatever is on the left of it (which could be the output of a program) to the specified place on the right. If the file does not exist already, it creates it.
+
+---
 
 ### Step 2: Creating a remote repository
 1. Log in to your GitHub account and navigate to the [Create a New Repository](https://github.com/new) page.
@@ -62,6 +71,8 @@ git commit -m "Initial commit with README"
     - **Visibility:** Public
 1. Do not initialize the repository with a README, .gitignore, or license.
 1. Click **Create Repository.**
+
+---
 
 ### Step 3: Link you Local Repository to Github
 1. Add the Github repository as a remote: 
@@ -76,7 +87,9 @@ git push --set-upstream origin main
 ```
 !!! note
     `git push --set-upstream origin main`: This command pushes the `main` branch to the remote repository `origin`. The `--set-upstream` flag sets up the `main` branch to track the remote branch, meaning future pushes and pulls can be done without specifying the branch name and just writing `git push origin` when working on your local `main` branch. This long flag has a corresponding `-u` short flag.
-Back in your web browser, refresh your GitHub repository to see that the same commit you made locally has now been pushed to remote. You can use `git log` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub. This is the result of pushing your changes to your remote repository.
+You can now refresh your GitHub repository in your browser to see that the same commit you made locally has now been pushed to remote. You can also use `git log` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub.
+
+---
 
 ## Part 2: Setting up the Development Environment
 
@@ -112,6 +125,8 @@ serde = "1.0"
 ```
 We will see an example of this later on!
 
+---
+
 ### Step 1: Add Development Container Configuration
 
 1. In VS Code, open the `rust-dev-cont` directory. You can do this via: File > Open Folder.
@@ -145,11 +160,14 @@ The `devcontainer.json` file defines the configuration for your development envi
 }
 ```
 
+---
 
 ### Step 2. Reopen the Project in a VSCode Dev Container
-Reopen the project in the container by pressing Ctrl+Shift+P (or Cmd+Shift+P on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This may take a few minutes while the image is downloaded and the requirements are installed.
+Reopen the project in the container by pressing Ctrl+Shift+P (or Cmd+Shift+P on Mac), typing "Dev Containers: Reopen in Container," and selecting the option. This will take a few minutes for the first time to download and install the image and everything.
 
-Once your dev container setup completes, close the current terminal tab (trash can), open a new terminal pane within VSCode, and try running `rustc --version` to see your dev container is running a recent version of Rust without much effort! (As of January 2025, the latest stable Rust version is 1.83.0.)
+Once your dev container setup completes, close the current terminal tab, open a new terminal pane within VSCode, and try running `rustc --version` to see your dev container is running a recent version of Rust without you having to even manually download or install anything! (As of January 2025, the latest stable Rust version is 1.83.0.)
+
+---
 
 ## Part 3: Developing in Rust
 
@@ -206,6 +224,9 @@ fn main() {
     println!("HELLO COMP423");
 }
 ```
+
+---
+
 ### Finally... Compiling and Running
 
 We can now compile like so:
@@ -240,17 +261,20 @@ HELLO COMP423
 !!! success
     Congratulations! You have built a development container in Rust!
 
+---
+
 ## Part 4: Pushing to Github
 You can now run the following commands in order to push your amazing new Dev Container project to Github for the world to see
 
 ``` bash
 git add . # this is for staging your changes
-git commit -m "Successfully printed HELLO COMP 423 with my own Rust Dev Container"
+git commit -m "Successfully printed HELLO COMP423 with my own Rust Dev Container"
 git push
 ```
 
 Congrats you have now finished the tutorial!
 
+---
 
 ## References
 
