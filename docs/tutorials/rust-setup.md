@@ -242,7 +242,8 @@ cargo build
    Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)
 ```
 
-The `cargo build` command compiles your Rust project and generates an executable kind of like `gcc [filename.c] -o [output_filename]` that you may remember from COMP 211
+The `cargo build` command compiles your Rust project and generates an executable kind of like the C language's `gcc [filename.c] -o [output_filename]` command that you may remember from COMP 211 which compiles the specified file and creates an executable object file to run the program.
+
 #### How It Works
 
 **Compilation**:
