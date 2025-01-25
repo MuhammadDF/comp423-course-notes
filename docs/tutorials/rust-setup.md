@@ -250,6 +250,7 @@ The `cargo build` command compiles your Rust project and generates an executable
 
 **Default Build Mode**:
 By default, `cargo build` compiles in debug mode. Debug builds prioritize faster compilation and include debug symbols, making them suitable for development and testing.
+
 After building, the binary (executable) will be located in:
 ``` bat
 target/debug/hello_world
