@@ -19,7 +19,7 @@ print("We love COMP 423!")
 
 ## Welcome  
 
-This tutorial will provide stepy-by-step instructions for creating a Dev Container in Rust.
+This tutorial will provide step-by-step instructions for creating a Dev Container in Rust.
 
 !!! info
     This tutorial is highly inspired by a [previous tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/) my professor [Kris Jordan](https://www.linkedin.com/in/krisjordan/) had already made
@@ -35,13 +35,16 @@ Before we dive in, make sure you have:
 1. Visual Studio Code (VS Code): Download and install it from [here.](https://code.visualstudio.com/)
 1. Docker installed: Required to run the dev container. [Get Docker here.](https://www.docker.com/products/docker-desktop)
 
+!!! note
+    For this tutorial, you do not need to install anything other than VSCode, Docker and Git. You should not install Rust. That is the role of the dev container!
+
 ---
 
 ## Part 1: Project setup (Setting up your directory, Git, and Github)
 
 ### Step 1: Creating a directory and a local Git Repository
-- Open you terminal or command prompt
-- Create a new directory
+- Open you terminal or command prompt.
+- Create a new directory:
 ``` bat
 mkdir rust-dev-cont
 cd rust-dev-cont
@@ -58,8 +61,8 @@ git commit -m "Initial commit with README"
 ```
 !!! note
     The command `echo` sends the string in quotation marks to the specified place.
-    Usually without any place to go it just sends it back to stdout which is your terminal by default.
-    However if you have taken 211 before you know that the `>` operator writes whatever is on the left of it (which could be the output of a program) to the specified place on the right. If the file does not exist already, it creates it.
+    Usually without any place to go, it just sends it back to stdout which is your terminal by default.
+    However, if you have taken 211 before, you know that the `>` operator writes whatever is on the left of it (which could be the output of a program) to the specified place on the right. If the file does not exist already, it creates it.
 
 ---
 
@@ -80,7 +83,8 @@ git commit -m "Initial commit with README"
 git remote add origin https://github.com/<your-username>/rust-dev-cont.git
 ```
 Replace `<your-username>` with your GitHub username.
-1. Check your default branch name with the subcommand `git branch`. If it's not `main`, rename it to `main` with the following command: `git branch -M main`. Old versions of `git` choose the name `master` for the primary branch, but these days `main` is the standard primary branch name.
+1. Check your default branch name with the subcommand `git branch`. If it's not `main`, rename it to `main` with the following command: `git branch -M main`. Old versions of `git` use the name `master` for the primary branch. However, these days `main` is the standard primary branch name.
+
 1. Push your local commits to the GitHub repository:
 ``` bat
 git push --set-upstream origin main
@@ -93,13 +97,15 @@ You can now refresh your GitHub repository in your browser to see that the same 
 
 ## Part 2: Setting up the Development Environment
 
+Before you begin developing in Rust, you need to set up your development environment! 
 ### What is a Development (Dev) Container?
 
-A **dev container** ensures that your development environment is consistent and works across different machines. At its core, a dev container is a preconfigured environment defined by a set of configuration files, typically leveraging Docker to create isolated, consistent setups for development. Think of it as a "mini computer" inside your computer that includes everything you need to work on a specific project—such as the right programming language, tools, libraries, and dependencies.
+In essence, a **dev container** is a preconfigured environment defined by a set of configuration files usually using Docker to create isolated setups for development. You can think of it a mini computer running inside your computer including everything you need to work on a project. Your dev container will include the right programming language, tools, libraries and dependencies. This is why you don't need to install Rust for the purpose of this tutorial. The dev container ensures that your development environment is consistent and works across different machines.
 
 #### Why is this valuable?
 
-In the technology industry, teams often work on complex projects that require a specific set of tools and dependencies to function correctly. Without a dev container, each developer must manually set up their environment, leading to errors, wasted time, and inconsistencies. With a dev container:
+In the technology industry, teams often work on complex projects that require a specific set of tools and dependencies to function correctly. Without a dev container, each developer must manually set up their environment. The can lead to errors, wasted time, and inconsistencies. With a dev container:
+
 - Everyone works in an identical environment, reducing bugs caused by "it works on my machine" issues.
 - Onboarding new team members becomes faster and easier, as they can start coding with just a few steps.
 - Dependencies and tools remain isolated, avoiding conflicts with other projects or the local system.
